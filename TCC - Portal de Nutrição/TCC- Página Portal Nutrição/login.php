@@ -1,0 +1,32 @@
+<?php?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/TCC - login/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
+    </style>
+</head>
+<body>
+    <form action="" id="">
+        <div class="top-login">
+        <h1>LOGIN</h1>
+        <small>Email:</small>
+        <input type="text" name="" id="">
+        <small>Senha:</small>
+        <input type="password">
+        <button id="entrar" type="submit">ENTRAR</button>
+        <a href=""><h3>Esqueceu a senha?</h3></a>
+        </div>
+        <div class="criarConta">
+            <h3>É novo por aqui?</h3>
+            <button type="submit">CRIAR CONTA</button>
+        </div>
+    </form>
+</body>
+</html>
+

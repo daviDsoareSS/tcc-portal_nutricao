@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-clip: border-box;
+    background-position: center center;
+    width: 100%;
+    background-image: url("/img/background/Wallpaper.jpg");
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    max-height: 100vw;
+    height: 40vw;
+
+}
+form{
+    margin: 10vw;
+    width: 25vw;
+    height: 27vw;
+    position: relative;
+    background-color: white;
+    border-top: 10px solid #F66B6B;
+    color: #F66B6B ;
+    font-size: larger;
+    font-size: 1vw;
+}
+form .top-login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+}
+form h1{
+    text-align: center;
+}
+form h3{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+form #entrar{
+    margin-top: 1vw;
+}
+form button{
+    cursor: pointer;
+    color: white;
+    background-color: #F66B6B;
+    border: none;
+    padding: 20px;
+    border-radius: 30px;
+}
+form input{
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 3px solid #F66B6B;
+}
+form small{
+    margin-top: 1vw;
+}
+.criarConta{
+    display: flex;
+    top: 90%;
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #F66B6B;
+    color: white;
+}
+.criarConta h3{
+    font-weight: bolder;
+    color: rgb(31, 31, 31);
+}
+.criarConta button{
+    margin-left: 1vw;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 1660px){
+    form{
+        height: 30vw;  
+    } 
+}
+@media (max-width: 1420px){
+    form{
+        height: 40vw;  
+        width: 37vw;
+    } 
+}
+@media (max-width: 865px){
+    body{
+        margin-top: 10vw;
+        background-image: none;
+        background: rgb(0,112,255);
+        background: #454d6b;
+    }
+    form{
+        color: white;
+        background-color: #353b50;
+        font-size: 30px;
+        height: 70vw;  
+        width: 60vw;
+    } 
+    form .top-login{
+        padding: 40px;
+    }
+    form input{
+        background: none;
+    }
+}
+@media (max-width: 600px){
+    form{
+        text-align: center;
+        font-size: 20px;
+        height: 80vw;  
+        width: 60vw;
+    } 
+}
+@media (max-width: 480px){
+    form{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        height: 100vw;  
+        width: 80vw;
+    } 
+}
