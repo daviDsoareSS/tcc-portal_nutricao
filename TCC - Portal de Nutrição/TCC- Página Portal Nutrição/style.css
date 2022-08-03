@@ -472,3 +472,21 @@ footer{
     margin-left: 4vw;
     width: 58vw;
 }
+.container-calculadora{
+    margin: 2vw 10vw;
+}
+.container-calculadora h1{
+    color: #F66B6B;
+}
+.container-calculadora .input-calculadora{
+    padding: 5px 30px ;
+    border-radius: 7px;
+    border: 2px solid #F66B6B;
+}
+.btn-calculadora{
+    padding: 5px 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    background-color: #F66B6B;
+}
