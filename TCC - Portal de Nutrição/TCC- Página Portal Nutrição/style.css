@@ -61,6 +61,7 @@ nav{
 }
 
 .navbar a{
+    font-size: 14px;
     margin-right: 4vw;
 }
 .navbar a:hover{
@@ -70,7 +71,7 @@ nav{
 .form-inline{
     display: flex;
     max-width: 100%;
-    margin-left: 15vw;
+    margin-left: 18vw;
   
 }
 .form-inline input:hover{
@@ -230,6 +231,18 @@ nav{
     width: 39vw;
 }
 @media(max-width:1570px){
+    .navbar a{
+        font-size: 14px;
+    }
+    .navbar a{
+        margin-right: 2vw;
+    }
+    .form-inline {
+        display: flex;
+        max-width: 100%;
+        margin-left: 0vw;
+      
+    }
     .container-section{
         margin: 0 10vw;
         display: grid;
