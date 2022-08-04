@@ -67,25 +67,27 @@
         <div id="logo">
         </div>
         <div id="calculadora">
-            <form name="calc" class="form">
-                <fieldset class="f">
+            <form action="">
                     <label>
                         <span class="span">Seu Peso:</span>
                         <br/>
-                        <input type="text" name="peso" id="peso" class="input-calculadora" placeholder="ex. 60">
+                        <input type="number" name="peso" id="peso" class="input-calculadora" placeholder="ex. 60">
                     </label>
                     <br/>
                     <label>
                         <span class="span">Sua Altura:</span>
                         <br/>
-                        <input type="text" name="altura" id="altura"  class="input-calculadora" placeholder="ex. 1.70">
+                        <input type="number" name="altura" id="altura"  class="input-calculadora" placeholder="ex. 1.70">
                     </label>
                     <br/>
                     <br/>
-                    <input type="submit" function="calcularIMC();" name="envia" value="Calcular" class="btn-calculadora">
-                </fieldset>
+                    <input type="submit" id="btn-calcular" value="Calcular">
             </form>
         </div>
+    </div>
+    <div class="container-resultado-calculo">
+      <h1 id="resultadoIMC">Resultado: </h1>
+      <span id="classificacaoIMC"></span>
     </div>
   </main>
 
@@ -94,6 +96,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="script/js.js"></script>
+<script src="script/js.js" defer></script>
 </body>
 </html>
