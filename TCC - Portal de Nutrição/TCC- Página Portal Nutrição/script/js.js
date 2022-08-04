@@ -20,9 +20,9 @@
             document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Peso Normal</strong></p>";
         } else if (resultado > 25.00 && resultado < 29.99){
             document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Sobrepeso</strong></p>";
-        } else if (resultado >= 30.00) {
+        } else if (resultado > 30.00 && resultado < 39.99) {
             document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Obesidade</strong></p>";
-        } else if (resultado >= 40.00) {
+        } else if (resultado > 40.00) {
             document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Obesidade grave</strong></p>";
         } 
     });
