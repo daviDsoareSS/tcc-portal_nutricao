@@ -14,20 +14,16 @@
         
         document.getElementById("resultadoIMC").innerHTML = "Resultado: "+resultado.toFixed(2);   
 
-        if (resultado < 17) {
-            document.getElementById("classificacaoIMC").innerHTML = "</p>Sua classificação: Muito abaixo do peso</p>";
-        } else if (resultado < 18.49 && resultado > 17) {
-            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: Abaixo do peso</p>";
-        } else if (resultado < 24.99 && resultado > 18.5){
-            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: Peso normal</p>";
-        } else if (resultado < 29.99 && resultado > 25) {
-            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: Acima do peso</p>";
-        } else if (resultado < 34.99 && resultado > 30) {
-            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: Obesidade I</p>";
-        } else if (resultado < 39.99 && resultado > 35) {
-            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: Obesidade II (severa)</p>";
-        } else if (resultado > 40){
-            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: Obesidade II (severa)</p>";
+        if (resultado < 18.50) {
+            document.getElementById("classificacaoIMC").innerHTML = "</p>Sua classificação: <strong>Abaixo do peso</strong></p>";
+        } else if (resultado > 18.50 && resultado < 24.99) {
+            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Peso Normal</strong></p>";
+        } else if (resultado > 25.00 && resultado < 29.99){
+            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Sobrepeso</strong></p>";
+        } else if (resultado >= 30.00) {
+            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Obesidade</strong></p>";
+        } else if (resultado >= 40.00) {
+            document.getElementById("classificacaoIMC").innerHTML ="</p>Sua classificação: <strong>Obesidade grave</strong></p>";
         } 
     });
 

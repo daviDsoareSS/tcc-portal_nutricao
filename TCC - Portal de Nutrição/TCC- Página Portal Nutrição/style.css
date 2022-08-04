@@ -473,9 +473,16 @@ footer{
     width: 58vw;
 }
 .container-calculadora{
+    flex-direction: row-reverse;
+    display: flex;
     margin: 2vw 10vw;
 }
+.container-calculadora img{
+    margin-right: 1vw;
+    width: 51vw;
+}
 .container-calculadora h1{
+    display: inline-block;
     color: #F66B6B;
 }
 .container-calculadora .input-calculadora{
@@ -483,10 +490,24 @@ footer{
     border-radius: 7px;
     border: 2px solid #F66B6B;
 }
+.form-calculadora{
+    
+}
+#calculadora{
+    margin-right: 12vw;
+}
+#calculadora #span{
+    
+}
 #btn-calcular{
     padding: 5px 30px;
     border: none;
     color: white;
     border-radius: 10px;
     background-color: #F66B6B;
+}
+#classificacaoIMC{
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(17, 17, 17);
 }

@@ -62,20 +62,19 @@
   </nav>
   <hr>
   <main class="container-calculadora">
-    <h1> Calculadora de IMC</h1>
-    <div id="content">
-        <div id="logo">
-        </div>
+    <img src="img/calculo-de-imc/tabela-classificacao-IMC.png" alt="">
         <div id="calculadora">
-            <form action="">
+          
+          <h1> Calculadora de IMC</h1>
+            <form action="" class="form-calculadora">
                     <label>
-                        <span class="span">Seu Peso:</span>
+                        <span class="span"><strong>Seu Peso:</strong></span>
                         <br/>
                         <input type="number" name="peso" id="peso" class="input-calculadora" placeholder="ex. 60">
                     </label>
                     <br/>
                     <label>
-                        <span class="span">Sua Altura:</span>
+                        <span class="span"><strong>Altura:</strong></span>
                         <br/>
                         <input type="number" name="altura" id="altura"  class="input-calculadora" placeholder="ex. 1.70">
                     </label>
@@ -83,12 +82,14 @@
                     <br/>
                     <input type="submit" id="btn-calcular" value="Calcular">
             </form>
-        </div>
-    </div>
-    <div class="container-resultado-calculo">
-      <h1 id="resultadoIMC">Resultado: </h1>
+            <div class="container-resultado-calculo">
+      <h1 id="resultadoIMC"></h1>
       <span id="classificacaoIMC"></span>
     </div>
+    
+        </div>
+    
+    
   </main>
 
 
