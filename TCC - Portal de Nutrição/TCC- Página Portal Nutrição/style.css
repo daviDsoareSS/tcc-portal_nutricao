@@ -512,3 +512,6 @@ footer{
     font-weight: bolder;
     color: rgb(17, 17, 17);
 }
+.container-perfil{
+    margin: 0 10vw;
+}
