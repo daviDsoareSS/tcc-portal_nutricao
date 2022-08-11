@@ -33,8 +33,9 @@ header{
 }
 .container-header .user-login{
     display: flex;
+    align-items: center;
     margin-right: 20px;
-    margin-left: 59.4vw;
+    margin-left: 58.4vw;
 }
 .container-header .user-login small{
     color: #F66B6B;
@@ -44,7 +45,7 @@ header{
     display: block;
 }
 .container-header .user-login img{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .img-user{
     display: block;
