@@ -1,11 +1,12 @@
 *{
+    
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html{
-
+    overflow-x: hidden;
 
     scroll-behavior: smooth;
 }
@@ -23,9 +24,127 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
   }
 body{
-    overflow-x: hidden;
+    
     font-family: 'Nunito Sans', sans-serif;
     margin-left: 100vw;
+}
+#preloader {
+    
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#F66B6B; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas > div {
+  display: inline-block;
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas > div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
+}#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#F66B6B; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas > div {
+  display: inline-block;
+  background-color: #fff;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas > div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
 }
 header{
     margin: 10px 10vw;
@@ -35,13 +154,15 @@ header{
     display: flex;
 }
 .container-header .user-login{
+    
     display: flex;
     align-items: center;
     margin-right: 20px;
-    margin-left: 58.4vw;
+    margin-left: 56.4vw;
 }
 .container-header .user-login small{
     color: #F66B6B;
+    text-decoration: none;
     font-weight: bolder;
     font-size: 18px;
     margin-top: 20px;
@@ -519,7 +640,6 @@ footer{
     padding-left: 0;
     border: 1px solid black;
     border-radius: 7px;
-    font-size: 17px;
     min-width: 18vw;
     min-height: 10vw;
     color: white;
@@ -536,7 +656,7 @@ footer{
 }
  
 .card-opcoes ul{
-    
+    font-size: 17px;
     padding-left: 0px;
     white-space: nowrap;
     list-style: none;
@@ -576,6 +696,7 @@ footer{
     border: 4px solid #F66B6B;
 }
 .dados-usuario{
+    
     border: 1px solid black;
     border-radius: 8px;
     color: white;
@@ -587,6 +708,7 @@ footer{
     color: rgba(246,107,107,1);
 }
 .dados-usuario h5{
+    font-size: 17px;
     font-weight: 400;
 }
 .dados-usuario hr{
@@ -636,4 +758,33 @@ footer{
     border-radius: 7px;
     background: rgb(246,107,107);
     background: linear-gradient(0deg, rgba(246,107,107,1) 0%, rgba(246,46,46,1) 100%);
+}
+/*PÁGINA DE EXERCÍCIOS*/
+.accordion-button{
+    color: white !important;
+    font-weight: bold;
+    background: rgb(36,41,57) !important;
+    background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%) !important;
+}
+.accordion-body{
+    margin: 0;
+    padding: 0;
+    display: grid !important;
+    grid-template-columns: repeat(2,0.45fr);
+    gap: 1vw;
+    color: white !important;
+    background: rgba(36, 41, 57, 0.863) !important;
+}   
+.accordion-body iframe{
+    width: 23vw;
+    height: 12vw;
+}
+.accordion-body h3{
+    color: #F66B6B;
+}
+.accordion-body p{
+    color: #ffffff;
+    text-align: justify;
+    width: 100%;
+    margin-right: 20vw;
 }

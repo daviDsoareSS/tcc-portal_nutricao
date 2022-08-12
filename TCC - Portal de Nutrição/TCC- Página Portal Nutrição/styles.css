@@ -1,16 +1,17 @@
 *{
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+#pag-login{
     font-family: 'Lato', sans-serif;
     background-repeat: no-repeat;
     object-fit: contain;
     background-clip: border-box;
     background-position: center center;
     width: 100%;
-    background-image: url("/img/background/Wallpaper.jpg");
+    background-image: url("img/background/Wallpaper.jpg");
     backdrop-filter: blur( 10.5px );
     -webkit-backdrop-filter: blur( 10.5px );
     max-height: 100vw;
@@ -26,7 +27,7 @@ form{
     border-top: 10px solid #F66B6B;
     color: #F66B6B ;
     font-size: larger;
-    font-size: 1vw;
+    font-size: 15px;
 }
 form .top-login{
     position: relative;
@@ -38,27 +39,34 @@ form h1{
     text-align: center;
 }
 form h3{
-    padding-top: 10px;
+    padding-top: 7px;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
     
 }
 form #entrar{
+    width: 100%;
     margin-top: 1vw;
 }
 form button{
     cursor: pointer;
     color: white;
-    background-color: #F66B6B;
+    background: rgb(246,107,107);
+    background: linear-gradient(0deg, rgba(246,107,107,1) 0%, rgba(246,46,46,1) 100%);
     border: none;
     padding: 20px;
     border-radius: 30px;
 }
 form input{
+    font-weight: bold;
+    
     padding: 10px 30px;
     border-radius: 30px;
     border: 3px solid #F66B6B;
+}
+form input::placeholder{
+    font-style: italic;
 }
 form small{
     margin-top: 1vw;
@@ -88,12 +96,12 @@ form small{
 }
 
 @media (max-width: 1660px){
-    form{
+    .container-login{
         height: 30vw;  
     } 
 }
 @media (max-width: 1420px){
-    form{
+    .container-login{
         height: 40vw;  
         width: 37vw;
     } 
@@ -105,22 +113,22 @@ form small{
         background: rgb(0,112,255);
         background: #454d6b;
     }
-    form{
+    .container-login{
         color: white;
         background-color: #353b50;
         font-size: 30px;
         height: 70vw;  
         width: 60vw;
     } 
-    form .top-login{
+    .container-login .top-login{
         padding: 40px;
     }
-    form input{
+    .container-login input{
         background: none;
     }
 }
 @media (max-width: 600px){
-    form{
+    .container-login{
         text-align: center;
         font-size: 20px;
         height: 80vw;  
@@ -128,11 +136,37 @@ form small{
     } 
 }
 @media (max-width: 480px){
-    form{
+    .container-login{
         margin: 0 auto;
         text-align: center;
         font-size: 20px;
         height: 100vw;  
         width: 80vw;
     } 
+}
+#pag-criar-conta{
+    background-image: none;
+    background: rgb(36,41,57);
+    background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%);
+}
+.container-criar-conta{
+    margin-top: 3vw;
+    min-height: 48vw;
+}
+.container-criar-conta select{
+    border-radius: 30px;
+    background-color: #F66B6B;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 5px;
+}
+#login, #criar-conta{
+    background: none;
+}
+.container-criar-conta select::content{
+    background-color: red;
+}
+.container-criar-conta .top-login{
+    
+    top: 0;
 }
