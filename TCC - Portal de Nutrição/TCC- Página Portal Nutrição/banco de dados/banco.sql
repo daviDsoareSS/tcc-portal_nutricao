@@ -1,6 +1,6 @@
 CREATE DATABASE nutriacao;
 
-CREATE TABLE user(
+CREATE TABLE users(
     idUser serial PRIMARY KEY NOT NULL, 
     nome varchar(100) NOT NULL,
     dataNasc DATE NOT NULL,

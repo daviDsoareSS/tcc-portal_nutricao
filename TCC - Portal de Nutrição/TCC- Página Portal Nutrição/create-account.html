@@ -14,26 +14,26 @@
     </style>
 </head>
 <body id="pag-criar-conta">
-    <form class="container-criar-conta">
+    <form class="container-criar-conta" method="post" action="acesso.php">
         <div class="top-login">
         <h1>CRIAR CONTA</h1>
         <small>Digite seu nome:</small>
-        <input type="text" name="" id="" placeholder="Digite nome e sobrenome">
+        <input type="text" name="nome" id="" placeholder="Digite nome e sobrenome">
         <small>Digite sua data de nascimento:</small>
-        <input type="date" name="" id="" placeholder="*somente números">
+        <input type="date" name="dataNasc" id="" placeholder="*somente números">
         <small>Digite seu peso inicial:</small>
-        <input type="text" name="" id="" placeholder="ex. 68.7">
+        <input type="text" name="pesoIni" id="" placeholder="ex. 68.7">
         <small>Digite sua altura:</small>
-        <input type="text" name="" id="" placeholder="ex. 1.75">
+        <input type="text" name="altura" id="" placeholder="ex. 1.75">
         <small>Sexo:</small>
-        <select name="Sexo" id="">
+        <select name="sexo" id="">
             <option value="homem">Masculino</option>
             <option value="homem">Feminino</option>
         </select>
         <small>Digite um email:</small>
-        <input type="text" name="" id="" placeholder="ex. joao@gmail.com">
+        <input type="text" name="email" id="" placeholder="ex. joao@gmail.com">
         <small>Insira uma senha:</small>
-        <input type="password">
+        <input type="password" name="senha">
         <small>Confirme sua senha:</small>
         <input type="password">
         <a href="index.html"><button id="entrar" type="submit">CRIAR CONTA</button></a>
