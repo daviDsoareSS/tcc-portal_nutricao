@@ -211,6 +211,7 @@ nav{
     background-color: #F66B6B;
 }
 .conteudo-carousel1{
+    text-align: justify;
     z-index: 4;
     font-family: 'Lato', sans-serif;
     position: absolute;
@@ -220,9 +221,11 @@ nav{
 } 
 
 .conteudo-carousel1 p{
+  
     color: #F66B6B;
 }
 .conteudo-carousel2{
+    text-align: justify;
     z-index: 4;
     font-family: 'Lato', sans-serif;
     position: absolute;
@@ -232,9 +235,11 @@ nav{
 } 
 
 .conteudo-carousel2 p{
+    
     color: #F66B6B;
 }
 .conteudo-carousel3{
+    text-align: justify;
     z-index: 4;
     font-family: 'Lato', sans-serif;
     position: absolute;
