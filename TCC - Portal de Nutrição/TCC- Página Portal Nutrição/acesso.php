@@ -1,6 +1,6 @@
  <?php
 
-    include_once("conexao.php");
+    include_once('conexao.php');
     
     $nome = $_POST['nome'];
     $dataNasc = $_POST['dataNasc'];
@@ -10,16 +10,15 @@
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     
-    $senha = base64_encode($senha); 
+    //$senha = base64_encode($senha); 
 
-    $sql = "INSERT INTO user VALUES (DEFAULT, '$nome','$dataNasc', '$pesoIni', '$altura', '$sexo','$email','$senha')";
+    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc', '$pesoIni', '$altura', '$sexo','$email','$senha')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<br>"."Informações inseridas com sucesso!";
     }else {
         echo "<br>"."Informações não inseridas!";
     }
-    
     
     $conn->close();
 ?>
