@@ -15,7 +15,7 @@
     $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc', '$pesoIni', '$altura', '$sexo','$email','$senha')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<br>"."Informações inseridas com sucesso!";
+        header("location:login.html");
     }else {
         echo "<br>"."Informações não inseridas!";
     }

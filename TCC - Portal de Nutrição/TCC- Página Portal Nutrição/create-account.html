@@ -9,40 +9,44 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
+    <script src="script/validate.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
     </style>
 </head>
 <body id="pag-criar-conta">
-    <form class="container-criar-conta" method="post" action="acesso.php">
+    <form action="" class="container-criar-conta" method="post" id="form">
         <div class="top-login">
         <h1>CRIAR CONTA</h1>
         <small>Digite seu nome:</small>
-        <input type="text" name="nome" id="" placeholder="Digite nome e sobrenome">
+        <input type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome">
         <small>Digite sua data de nascimento:</small>
-        <input type="date" name="dataNasc" id="" placeholder="*somente números">
+        <input type="date" name="dataNasc" id="dataNasc" placeholder="*somente números">
         <small>Digite seu peso inicial:</small>
-        <input type="text" name="pesoIni" id="" placeholder="ex. 68.7">
+        <input type="text" name="pesoIni" id="pesoIni" placeholder="ex. 68.7">
         <small>Digite sua altura:</small>
-        <input type="text" name="altura" id="" placeholder="ex. 1.75">
+        <input type="text" name="altura" id="altura" placeholder="ex. 1.75">
         <small>Sexo:</small>
-        <select name="sexo" id="">
-            <option value="homem">Masculino</option>
-            <option value="homem">Feminino</option>
+        <select name="sexo" id="sexo">
+            <option value="homem" id="homem">Masculino</option>
+            <option value="mulher" id="mulher">Feminino</option>
         </select>
         <small>Digite um email:</small>
-        <input type="text" name="email" id="" placeholder="ex. joao@gmail.com">
+        <input type="text" name="email" id="email" placeholder="ex. joao@gmail.com">
         <small>Insira uma senha:</small>
-        <input type="password" name="senha">
+        <input type="password" name="senha" id="senha">
         <small>Confirme sua senha:</small>
-        <input type="password">
-        <a href="index.html"><button id="entrar" type="submit">CRIAR CONTA</button></a>
+        <input type="password" name="senha2" id="senha2">
+        <p>Mensagem de erro</p>
+        <button id="entrar" type="submit" function="checkInputs();">CRIAR CONTA</button>
         </div>
         <div class="criarConta">
             <h3>Já tem uma conta?</h3>
             <button type="submit" id="login">FAZER LOGIN</button>
         </div>
     </form>
+
+    
 </body>
 </html>
 

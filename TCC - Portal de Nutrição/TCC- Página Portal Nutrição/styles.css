@@ -35,6 +35,14 @@ form .top-login{
     flex-direction: column;
     padding: 4vw;
 }
+form .top-login.success input {
+    border-color: #2ecc71;
+}
+  
+form .top-login.error input {
+    border-color: #e74c3c;
+}
+  
 form h1{
     text-align: center;
 }

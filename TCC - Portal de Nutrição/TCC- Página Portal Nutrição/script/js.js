@@ -27,9 +27,17 @@
         } 
     });
 
+    
+
 //PEGAR VALOR DO CARD MEU PERFIL
   let opcaocard = document.querySelector('#opcoes-card');
   console.log(opcaocard);
 
     let valorcard = opcaocard.li[opcaocard.ariaSelected].value;
 console.log(valorcard);
+
+const senha = document.querySelector('#senha');
+const senha2 = document.querySelector('#senha2');
+
+
+
