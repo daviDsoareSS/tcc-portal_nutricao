@@ -10,43 +10,58 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
     <script src="script/validate.js" defer></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@700&family=Lato&display=swap');
     </style>
 </head>
 <body id="pag-criar-conta">
-    <form action="" class="container-criar-conta" method="post" id="form">
+    <form action="acesso.php" class="container-criar-conta" method="post" id="form">
         <div class="top-login">
         <h1>CRIAR CONTA</h1>
-        <small>Digite seu nome:</small>
+        <p>Digite seu nome:</p>
         <input type="text" name="nome" id="nomeUser" placeholder="Digite nome e sobrenome">
-        <small>Digite sua data de nascimento:</small>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        <p>Digite sua data de nascimento:</p>
         <input type="date" name="dataNasc" id="dataNasc" placeholder="*somente números">
-        <small>Digite seu peso inicial:</small>
+        <p>Digite seu peso inicial:</p>
         <input type="text" name="pesoIni" id="pesoIni" placeholder="ex. 68.7">
-        <small>Digite sua altura:</small>
+        <p>Digite sua altura:</p>
         <input type="text" name="altura" id="altura" placeholder="ex. 1.75">
-        <small>Sexo:</small>
+        <p>Sexo:</p>
         <select name="sexo" id="sexo">
             <option value="homem" id="homem">Masculino</option>
             <option value="mulher" id="mulher">Feminino</option>
         </select>
-        <small>Digite um email:</small>
-        <input type="text" name="email" id="email" placeholder="ex. joao@gmail.com">
-        <small>Insira uma senha:</small>
-        <input type="password" name="senha" id="senha">
-        <small>Confirme sua senha:</small>
-        <input type="password" name="senha2" id="senha2">
-        <p>Mensagem de erro</p>
-        <button id="entrar" type="submit" function="checkInputs();">CRIAR CONTA</button>
-        </div>
-        <div class="criarConta">
+       </div>
+        <div class="container-email">
+            <p>Digite um email:</p>
+            <input class="form-control" type="text" name="email" id="email" placeholder="ex. joao@gmail.com">
+                
+            <p>Insira uma senha:</p>
+            <input class="form-control" type="password" name="senha" id="senha">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            <p>Confirme sua senha:</p>
+            <input class="form-control" type="password" name="senha2" id="senha2">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            <button class="btn btn-primary" id="submit" type="submit">CRIAR CONTA</button>
+    </div>
+        <div class="container-realizar-login">
             <h3>Já tem uma conta?</h3>
             <button type="submit" id="login">FAZER LOGIN</button>
         </div>
     </form>
 
-    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
 

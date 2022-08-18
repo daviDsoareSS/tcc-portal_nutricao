@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 #pag-login{
+    
     font-family: 'Lato', sans-serif;
     background-repeat: no-repeat;
     object-fit: contain;
@@ -16,91 +17,127 @@
     -webkit-backdrop-filter: blur( 10.5px );
     max-height: 100vw;
     height: 40vw;
-
+    
 }
-form{
-    margin: 10vw;
-    width: 25vw;
-    height: 27vw;
+#pag-criar-conta{
+    min-height: 60vw;
+    display: flex;
+    align-items: center;
+    margin-top: -6vw;
+    background-image: none;
+    background: rgb(36,41,57);
+    background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%);
+}
+.container-criar-conta{
+    margin: 0 auto;
+    min-height: 30vw;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     background-color: white;
-    border-top: 10px solid #F66B6B;
-    color: #F66B6B ;
-    font-size: larger;
-    font-size: 15px;
+    max-width: 42vw;
 }
-form .top-login{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 4vw;
-}
-form .top-login.success input {
-    border-color: #2ecc71;
-}
-  
-form .top-login.error input {
-    border-color: #e74c3c;
-}
-  
-form h1{
-    text-align: center;
-}
-form h3{
-    padding-top: 7px;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    
-}
-form #entrar{
-    width: 100%;
-    margin-top: 1vw;
-}
-form button{
-    cursor: pointer;
-    color: white;
-    background: rgb(246,107,107);
-    background: linear-gradient(0deg, rgba(246,107,107,1) 0%, rgba(246,46,46,1) 100%);
-    border: none;
-    padding: 20px;
-    border-radius: 30px;
-}
-form input{
+.container-criar-conta h1{
     font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 1vw;
+}
+.container-criar-conta p{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.top-login.success input {
+	border-color: #2ecc71;
+}
+
+.top-login.error input {
+	border-color: #e74c3c;
+}
+
+.top-login i {
+	visibility: hidden;
+	position: relative;
+	top: 40px;
+	right: 10px;
+}
+
+.top-login.success i.fa-check-circle {
+    position: relative;
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.top-login.error i.fa-exclamation-circle {
+    position: relative;
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.top-login small {
+	color: #e74c3c;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	visibility:collapse;
+}
+.container-email small {
+	color: #e74c3c;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	visibility:collapse;
+}
+
+.top-login.error small{
     
-    padding: 10px 30px;
-    border-radius: 30px;
-    border: 3px solid #F66B6B;
+	visibility: visible;
 }
-form input::placeholder{
-    font-style: italic;
+.container-criar-conta input{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: none;
+    border-bottom: 4px solid #F66B6B;
+    width: 15vw;
+    height: 2vw;
+    display: block;
 }
-form small{
-    margin-top: 1vw;
+.container-criar-conta .form-control{
+    border-radius: 0;
+} 
+.container-criar-conta .top-login{
+    padding: 2vw;
 }
-.criarConta{
-    display: flex;
-    top: 90%;
-    position: absolute;
-    margin: 0;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.container-criar-conta .container-email{
+    padding: 2vw;
+    margin-top: 3.5vw !important;
+    margin-left: 2vw;
+    
+}
+.container-criar-conta #submit{
     background-color: #F66B6B;
+    border: none;
     color: white;
-}
-.criarConta h3{
     font-weight: bolder;
-    color: rgb(31, 31, 31);
-}
-.criarConta button{
-    margin-left: 1vw;
-    font-weight: bolder;
-    font-size: 20px;
     cursor: pointer;
+    margin-top: 1vw;
+    width: 100%;
+    padding: 15px 25px;
+}
+.container-criar-conta .container-realizar-login{
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    padding: 2vw;
+    background-color: #F66B6B;
+    width: 100%;
+    
+}
+.container-criar-conta .container-realizar-login button{
+    margin-left: 1vw;
+    border: none;
     color: white;
+    font-weight: bolder;
 }
 
 @media (max-width: 1660px){
@@ -152,15 +189,7 @@ form small{
         width: 80vw;
     } 
 }
-#pag-criar-conta{
-    background-image: none;
-    background: rgb(36,41,57);
-    background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%);
-}
-.container-criar-conta{
-    margin-top: 3vw;
-    min-height: 48vw;
-}
+
 .container-criar-conta select{
     border-radius: 30px;
     background-color: #F66B6B;

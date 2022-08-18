@@ -20,8 +20,9 @@ const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const senha2 = document.getElementById("senha2");
 
-form.addEventListener("click", (e) => {
-  checkInputs();
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	checkInputs();
 });
 
 function checkInputs() {
@@ -35,35 +36,36 @@ function checkInputs() {
     const senhaValue = senha.value;
     const senha2Value = senha2.value;
 
+ 
   if (nomeValue === "") {
-    setErrorFor(nomeUser, "O nome de usuário é obrigatório.");
+    setErrorFor(nomeUser,"O nome de usuário é obrigatório.");
   } else {
     setSuccessFor(nomeUser);
   }
 
   if (emailValue === "") {
-    setErrorFor(email, "O email é obrigatório.");
+    setErrorFor(email,"O email é obrigatório.");
   } else if (!checkEmail(emailValue)) {
-    setErrorFor(email, "Por favor, insira um email válido.");
+    setErrorFor(email,"Por favor, insira um email válido.");
   } else {
     setSuccessFor(email);
   }
 
   if (senhaValue === "") {
-    setErrorFor(senha, "A senha é obrigatória.");
+    setErrorFor(senha,"A senha é obrigatória.");
   } else if (senhaValue.length < 7) {
-    setErrorFor(senha, "A senha precisa ter no mínimo 7 caracteres.");
+    setErrorFor(senha,"A senha precisa ter no mínimo 7 caracteres.");
   } else {
     setSuccessFor(senha);
   }
 
-  if (senha2Value === "") {
-    setErrorFor(senha2, "A confirmação de senha é obrigatória.");
-  } else if (senha2 !== senhaValue) {
-    setErrorFor(senha2, "As senhas não conferem.");
-  } else {
-    setSuccessFor(senha2);
-  }
+  if(senha2Value === '') {
+		setErrorFor(senha2, 'A senha de confirmação é obrigatória.');
+	} else if(senhaValue !== senha2Value) {
+		setErrorFor(senha2, 'As senhas não se coincidem.');
+	} else{
+		setSuccessFor(senha2);
+	}
 
   const topLogin = form.querySelectorAll(".top-login");
 
@@ -78,13 +80,11 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
   const topLogin = input.parentElement;
-  const p = topLogin.querySelector("p");
-
-  // Adiciona a mensagem de erro
-  p.innerText = message;
-
+  const small = topLogin.querySelector("small");
   // Adiciona a classe de erro
   topLogin.className = "top-login error";
+  // Adiciona a mensagem de erro
+  small.innerText = message;
 }
 
 function setSuccessFor(input) {
@@ -99,3 +99,4 @@ function checkEmail(email) {
     email
   );
 }
+
