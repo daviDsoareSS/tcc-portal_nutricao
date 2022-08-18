@@ -29,13 +29,18 @@
     background: linear-gradient(0deg, rgba(36,41,57,1) 0%, rgba(53,59,80,1) 100%, rgba(184,30,30,1) 100%);
 }
 .container-criar-conta{
+    white-space: nowrap;
     margin: 0 auto;
     min-height: 30vw;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     background-color: white;
-    max-width: 42vw;
+    border-top: 4px solid #F66B6B;
+    max-width: 40vw;
+}
+.container-criar-conta .container-message-user{
+    display: flex;
 }
 .container-criar-conta h1{
     font-weight: bold;
@@ -43,76 +48,50 @@
     margin-bottom: 1vw;
 }
 .container-criar-conta p{
+    color:#353b50;
+    margin-top: 10px;
     font-weight: bolder;
-    font-size: 18px;
-}
-.top-login.success input {
-	border-color: #2ecc71;
-}
-
-.top-login.error input {
-	border-color: #e74c3c;
-}
-
-.top-login i {
-	visibility: hidden;
-	position: relative;
-	top: 40px;
-	right: 10px;
-}
-
-.top-login.success i.fa-check-circle {
-    position: relative;
-	color: #2ecc71;
-	visibility: visible;
-}
-
-.top-login.error i.fa-exclamation-circle {
-    position: relative;
-	color: #e74c3c;
-	visibility: visible;
-}
-
-.top-login small {
-	color: #e74c3c;
-	position: relative;
-	bottom: 0;
-	left: 0;
-	visibility:collapse;
-}
-.container-email small {
-	color: #e74c3c;
-	position: relative;
-	bottom: 0;
-	left: 0;
-	visibility:collapse;
-}
-
-.top-login.error small{
-    
-	visibility: visible;
+    font-size: 15px;
 }
 .container-criar-conta input{
-    margin-top: 8px;
-    margin-bottom: 8px;
-    padding: 10px;
-    border: none;
+    border: 1px solid rgb(228, 228, 228);
+    margin-top: 0px;
+    padding: 20px;
     border-bottom: 4px solid #F66B6B;
     width: 15vw;
     height: 2vw;
     display: block;
 }
+
 .container-criar-conta .form-control{
     border-radius: 0;
 } 
 .container-criar-conta .top-login{
     padding: 2vw;
 }
+.container-criar-conta .container-sexo-user{ 
+    margin-top: 1vw;
+    margin-right: 1vw;
+    display: flex;
+}
+.container-criar-conta .container-sexo-user p{
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.container-criar-conta .container-sexo-user input{ 
+   width: 1vw;
+   display: block;
+   margin-left: 0.8vw;   
+}
+.container-criar-conta .container-sexo-user small{
+    margin-top: 0px;
+    margin-left: 1vw; 
+    font-size: 15px;
+    font-weight: bolder;
+}
 .container-criar-conta .container-email{
-    padding: 2vw;
-    margin-top: 3.5vw !important;
-    margin-left: 2vw;
-    
+    margin-top: 4.3vw;
 }
 .container-criar-conta #submit{
     background-color: #F66B6B;
@@ -128,10 +107,14 @@
     justify-content: center;
     margin: 0 auto;
     display: flex;
-    padding: 2vw;
+    padding: 1vw;
     background-color: #F66B6B;
     width: 100%;
     
+}
+.container-criar-conta .container-realizar-login h3{
+    font-weight: bold;
+    font-size: 16px;
 }
 .container-criar-conta .container-realizar-login button{
     margin-left: 1vw;
@@ -206,4 +189,66 @@
 .container-criar-conta .top-login{
     
     top: 0;
+}
+.modal-body {
+    
+    margin: 5vw;
+    position:fixed;
+    
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+.bolas-create-account>p{
+   
+}
+.modal-body .inner {
+    display: inline;
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas-create-account>div {
+  justify-content: center;
+  display: inline-block;
+  background-color: #F66B6B;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas-create-account>div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas-create-account>div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas-create-account>div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
 }

@@ -10,6 +10,7 @@
 
 
 const form = document.getElementById("form");
+const submit = document.getElementById("submit");
 const nomeUser = document.getElementById("nomeUser");
 const dataNasc = document.getElementById("dataNasc");
 const pesoIni = document.getElementById("pesoIni");
@@ -20,36 +21,15 @@ const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const senha2 = document.getElementById("senha2");
 
-form.addEventListener('submit', e => {
+submit.addEventListener('submit', e => {
 	e.preventDefault();
 	checkInputs();
 });
 
 function checkInputs() {
-    const nomeValue = nomeUser.value;
-    /*const dataValue = dataNasc.value;
-    const pesoValue = pesoIni.value;
-    const alturaValue = altura.value;
-    const homemValue = homem.value;
-    const mulherValue = mulher.value;*/
-    const emailValue = email.value;
     const senhaValue = senha.value;
     const senha2Value = senha2.value;
 
- 
-  if (nomeValue === "") {
-    setErrorFor(nomeUser,"O nome de usuário é obrigatório.");
-  } else {
-    setSuccessFor(nomeUser);
-  }
-
-  if (emailValue === "") {
-    setErrorFor(email,"O email é obrigatório.");
-  } else if (!checkEmail(emailValue)) {
-    setErrorFor(email,"Por favor, insira um email válido.");
-  } else {
-    setSuccessFor(email);
-  }
 
   if (senhaValue === "") {
     setErrorFor(senha,"A senha é obrigatória.");
@@ -94,9 +74,4 @@ function setSuccessFor(input) {
   topLogin.className = "top-login success";
 }
 
-function checkEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
-}
 

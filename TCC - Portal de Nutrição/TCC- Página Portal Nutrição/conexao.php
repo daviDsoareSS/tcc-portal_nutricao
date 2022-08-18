@@ -5,10 +5,7 @@ $username = "root";
 $password = "";
 $database = "nutriacao";
 
-$conn = new mysqli($servername, $username, $password, $database );
+$conn = mysqli_connect($servername, $username, $password, $database) or die("Falha ao conectar ao banco de dados: ".$conn->error) ;
 
-if($conn->error){
-    die("Falha ao conectar ao banco de dados: ".$conn->error);
-}
 
 ?>
