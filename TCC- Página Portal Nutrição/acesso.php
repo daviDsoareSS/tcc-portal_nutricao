@@ -19,8 +19,7 @@
     //$row = mysqli_fetch_assoc($result);
     //$result=$conn->query($verificaData);
 
-    $dataCriacaoConta = new date('Y/m/d H:i');
-    
+    $dataCriacaoConta = date('Y/m/d H:i');
 
     $verificaUser = "select count(*) as total from users where email='$email'";
     $result = mysqli_query($conn,$verificaUser);
