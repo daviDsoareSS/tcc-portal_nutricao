@@ -110,7 +110,13 @@
                 <hr>
                 <strong><h5>Nome:</strong> <small><?php echo($_SESSION['nome']);?></small></h5>
                 <hr>
-                <strong><h5>Idade:</strong> <small><?php echo($_SESSION['sexoUser']);?></small></h5>
+                <?php
+                 //FUNÇÃO CALCULAR IDADE DO USUARIO
+                  $dataNascimento = $_SESSION['dataNasc'];
+                  $data = new DateTime($dataNascimento);
+                  $resultado = $data->diff(new DateTime( date('Y-m-d')));
+                ?>
+                <strong><h5>Idade:</strong> <small><?php echo $resultado->format( '%Y anos' );?></small></h5>
                 <hr>
                 <strong><h5>Peso inicial:</strong> <small><?php echo($_SESSION['pesoInicial']);?></small></h5>
                 <hr>

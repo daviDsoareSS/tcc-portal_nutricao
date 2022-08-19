@@ -22,6 +22,9 @@
             if(!isset($_SESSION)){
                 session_start();
             }
+          
+
+
             $_SESSION['id'] = $user['idUser'];
             $_SESSION['nome'] = $user['nome'];
             $_SESSION['email'] = $user['email'];
