@@ -19,6 +19,8 @@
     //$row = mysqli_fetch_assoc($result);
     //$result=$conn->query($verificaData);
 
+    date_default_timezone_set('America/Sao_Paulo');
+
     $dataCriacaoConta = date('Y/m/d H:i');
 
     $verificaUser = "select count(*) as total from users where email='$email'";
