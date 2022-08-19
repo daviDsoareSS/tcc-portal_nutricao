@@ -1,8 +1,51 @@
 <?php
-    session_start();
-    require_once("conexao.php");
+    include("conexao.php");
     
-    $email=$_POST['email'];
+    if(isset($_POST['email']) || isset($_POST['senha'])){
+        if(strlen($_POST['email'])== 0){
+            echo "<p>Preencha o campo email.</p>";
+        }else if(strlen($_POST['senha'])== 0){
+                echo "<p>Preencha o campo senha.</p>";
+        }
+    else{
+        $email = mysqli_real_escape_string($conn,trim($_POST['email']));
+        $senha = mysqli_real_escape_string($conn,trim(base64_encode($_POST['senha'])));
+        
+        $sql = "SELECT * FROM users WHERE email = '$email' AND senha= '$senha'";
+        $result = $conn->query($sql) or die("Falha ao conectar: ". $conn->error);
+
+        $quantidade = $result->num_rows;
+
+        if($quantidade == 1){ 
+            $user = $result->fetch_assoc();
+            
+            if(!isset($_SESSION)){
+                session_start();
+            }
+            $_SESSION['id'] = $user['idUser'];
+            $_SESSION['nome'] = $user['nome'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['dataNasc'] = $user['dataNasc'];
+            $_SESSION['pesoInicial'] = $user['pesoInicial'];
+            $_SESSION['altura'] = $user['altura'];
+            $_SESSION['sexoUser'] = $user['sexoUser'];
+
+            header("Location: index.php");
+        
+        }else {
+            echo "Falha no login , verifique as informações inseridas.";
+        }
+    }
+}
+
+
+
+
+
+
+
+
+    /*$email=$_POST['email'];
     $senha=$_POST['senha'];
     $_SESSION['email'] = $email;
     //$senha=base64_encode($senha);
@@ -40,5 +83,5 @@
     }
     $conn->close();
 
-
+*/
 ?>

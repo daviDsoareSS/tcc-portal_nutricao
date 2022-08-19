@@ -4,7 +4,7 @@
     
     $nome = mysqli_real_escape_string($conn, trim($_POST['nome']));
     $dataNasc = $_POST['dataNasc'];
-    $pesoIni = $_POST['pesoIni'];
+    $pesoInicial = $_POST['pesoIni'];
     $altura = $_POST['altura'];
     $sexo = $_POST['sexoUser'];
     $email = mysqli_real_escape_string($conn,trim($_POST['email']));
@@ -18,8 +18,6 @@
     //$result = mysqli_query($conn,$verificaData);
     //$row = mysqli_fetch_assoc($result);
     //$result=$conn->query($verificaData);
-
-    date_default_timezone_set('America/Sao_Paulo');
 
     $dataCriacaoConta = date('Y/m/d H:i');
 
@@ -39,11 +37,11 @@
         exit;
     }
 
-    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc', '$pesoIni', '$altura', '$sexo','$email','$senha','$dataCriacaoConta')";
+    $sql = "INSERT INTO users VALUES (DEFAULT, '$nome','$dataNasc', '$pesoInicial', '$altura', '$sexo','$email','$senha','$dataCriacaoConta')";
     
     if ($conn->query($sql) === TRUE) {
         $_SESSION['status_cadastro'] = "<p style='color:green';>Usuário cadastrado com sucesso.</p>";
-        header("Location: /login.html");
+        header("Location: /login.php");
     }
 
     else if(empty($nome) || empty($email) || 
@@ -57,7 +55,7 @@
     }
     
     $conn->close();
-    header('Location: login.html');
+    header('Location: login.php');
     exit;
 ?>
        

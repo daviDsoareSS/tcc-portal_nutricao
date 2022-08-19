@@ -1,10 +1,9 @@
 <?php
-session_start();
-  
+  include('protect.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,11 +39,11 @@ session_start();
 </body>
 <header>
     <div class="container-header">
-      <a href="index.html"><img src="img/logo/NutriAçãoLogo.png" alt="" width="170px" height="100px"></a>
+      <a href="index.php"><img src="img/logo/NutriAçãoLogo.png" alt="" width="170px" height="100px"></a>
         <div class="user-login">
-            <a href="perfil.php"><small>Acesse seu perfil</small></a>
+            <a href="perfil.php"><small><?php echo($_SESSION['nome']);?></small></a>
             <img src="img/header/user-logo.png" width="60px" alt="">
-            <a href="login.html"><p><?php header('?sair')?>SAIR</p></a>
+              <a href="logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z"/></svg></a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,7 +52,7 @@ session_start();
 </header>
 <hr>
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="index.html">HOME</a>
+    <a class="navbar-brand" href="index.php">HOME</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -97,7 +96,7 @@ session_start();
             <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis qui excepturi culpa consectetur dolorem nisi minima veniam minus, laudantium ullam exercitationem cum officia vero, quo at id cupiditate eligendi nulla?</small>
             <br>
             <a href="#"><button id="btn-saibaMais">SAIBA MAIS</button></a>
-            <a href="login.html"><button id="btn-criarConta">CRIAR CONTA</button></a>
+            <a href="create-account.php"><button id="btn-criarConta">CRIAR CONTA</button></a>
             </div>
             <img src="img/carosel/background-carousel.jpg" class="d-block w-100" alt="..." height="900vw">
           </div>
@@ -195,7 +194,7 @@ session_start();
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <a href="index.html"><img src="img/logo/NutriAçãoLogo.png" alt="" width="170px" height="100px"></a>
+            <a href="index.php"><img src="img/logo/NutriAçãoLogo.png" alt="" width="170px" height="100px"></a>
           </h6>
           <p>
             Here you can use rows and columns to organize your footer content. Lorem ipsum

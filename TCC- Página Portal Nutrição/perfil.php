@@ -1,15 +1,12 @@
 <?php
-  include('conexao.php');
-
-  $consulta = "SELECT * FROM users";
-  $con = $conn->query($consulta) or die ($conn->error);
+  include('protect.php');
 
 /*  FUNÇÃO PARA TRANFORMAR DATA NO PADRÃO BRASILEIRO
     datetime("d/m/Y", stretotime($dado["dataNasc"]))
 */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,11 +37,12 @@
 <!-- fim do preloader --> 
 <header>
     <div class="container-header">
-      <a href="index.html"><img src="img/logo/NutriAçãoLogo.png" alt="" width="170px" height="100px"></a>
+      <a href="index.php"><img src="img/logo/NutriAçãoLogo.png" alt="" width="170px" height="100px"></a>
         <div class="user-login">
-            <a href="perfil.html"><small>Acesse seu perfil</small></a>
+            <a href="perfil.php"><small><?php echo($_SESSION['nome']);?></small></a>
             <img src="img/header/user-logo.png" width="60px" alt="">
-        </div>
+            <a href="logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z"/></svg></a>
+          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -52,7 +50,7 @@
 </header>
 <hr>
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="index.html">HOME</a>
+    <a class="navbar-brand" href="index.php">HOME</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -91,7 +89,7 @@
           Perfil
         </div>
         <ul class="opcoes" id="opcoes-card">
-          <a href="perfil.html"><li class="" value="1">Informações pessoais</li></a>
+          <a href="perfil.php"><li class="" value="1">Informações pessoais</li></a>
        
           <a href="perfil-meu-plano.html"><li class="" value="2">Meu plano</li></a>
       
@@ -107,25 +105,22 @@
             <h2>Dados do usuário</h2>
             <span id="linha-title"></span>
               <div class="dados-usuario">
-                <?php
-                
-                  while($dado = $con->fetch_array()){?>
-                <strong><h5>Email:</strong> <small><?php echo $dado["email"];?></small></h5>
+      
+                <strong><h5>Email:</strong> <small><?php echo($_SESSION['email']);?></small></h5>
                 <hr>
-                <strong><h5>Nome:</strong> <small><?php echo $dado["nome"];?></small></h5>
+                <strong><h5>Nome:</strong> <small><?php echo($_SESSION['nome']);?></small></h5>
                 <hr>
-                <strong><h5>Idade:</strong> <small><?php echo $dado["dataNasc"];?></small></h5>
+                <strong><h5>Idade:</strong> <small><?php echo($_SESSION['sexoUser']);?></small></h5>
                 <hr>
-                <strong><h5>Peso inicial:</strong> <small><?php echo $dado["pesoInicial"];?></small></h5>
+                <strong><h5>Peso inicial:</strong> <small><?php echo($_SESSION['pesoInicial']);?></small></h5>
                 <hr>
-                <strong><h5>Altura:</strong> <small><?php echo $dado["altura"];?></small></h5>
+                <strong><h5>Altura:</strong> <small><?php echo($_SESSION['altura']);?></h5>
                 <hr>
                 <strong><h5>Plano selecionado:</strong> <small>Ganho de peso Intermediário</small></h5>
                 <hr>
                 <button id="btn-editar">Editar</button>
                 <button id="btn-alterar-senha">Alterar senha</button>
             </div>
-                <?php }?>
           </div>
           <div class="grid-perfil ">
             <div class="card text-center card-alterar-foto" style="width: 18rem;">

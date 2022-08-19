@@ -75,7 +75,7 @@
     </div>
         <div class="container-realizar-login">
             <h3>Já tem uma conta?</h3>
-            <button type="submit" id="login">FAZER LOGIN</button>
+            <p id="login"><a href="login.php">FAZER LOGIN</a></p>
         </div>
     </form>
     <!-- JavaScript Bundle with Popper -->

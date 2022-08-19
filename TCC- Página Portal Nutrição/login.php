@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,15 +18,15 @@
         <div class="top-login">
         <h1>LOGIN</h1>
         <small>Email:</small>
-        <input type="text" name="email" id="">
+        <input type="text" name="email" id="" required>
         <small>Senha:</small>
-        <input type="password" name="senha">
+        <input type="password" name="senha" required>
         <a href="index.html"><button id="entrar" type="submit">ENTRAR</button></a>
-        <a href="#"><h3>Esqueceu a senha?</h3></a>
+        <a href="#"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
         </div>
         <div class="criarConta">
             <h3>É novo por aqui?</h3>
-            <button type="submit" id="criar-conta">CRIAR CONTA</button>
+            <a href="create-account.php"><p id="criar-conta">CRIAR CONTA</p></a>
         </div>
     </form>
 </body>
