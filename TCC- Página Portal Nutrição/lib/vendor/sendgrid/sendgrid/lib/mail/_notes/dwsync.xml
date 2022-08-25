@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Asm.php" server="testeemail-com-br.umbler.net" local="133014319979769760" remote="133013517000000000" Dst="0" />
+<file name="Attachment.php" server="testeemail-com-br.umbler.net" local="133014319979926022" remote="133013517000000000" Dst="0" />
+<file name="BatchId.php" server="testeemail-com-br.umbler.net" local="133014319980273607" remote="133013517000000000" Dst="0" />
+<file name="Bcc.php" server="testeemail-com-br.umbler.net" local="133014319980273607" remote="133013517000000000" Dst="0" />
+<file name="BccSettings.php" server="testeemail-com-br.umbler.net" local="133014319980586114" remote="133013517000000000" Dst="0" />
+<file name="BypassBounceManagement.php" server="testeemail-com-br.umbler.net" local="133014319980742339" remote="133013517000000000" Dst="0" />
+<file name="BypassListManagement.php" server="testeemail-com-br.umbler.net" local="133014319980898600" remote="133013517000000000" Dst="0" />
+<file name="BypassUnsubscribeManagement.php" server="testeemail-com-br.umbler.net" local="133014319981119926" remote="133013517000000000" Dst="0" />
+<file name="Category.php" server="testeemail-com-br.umbler.net" local="133014319981276218" remote="133013517000000000" Dst="0" />
+<file name="Cc.php" server="testeemail-com-br.umbler.net" local="133014319981432480" remote="133013517000000000" Dst="0" />
+<file name="ClickTracking.php" server="testeemail-com-br.umbler.net" local="133014319981588710" remote="133013517000000000" Dst="0" />
+<file name="Content.php" server="testeemail-com-br.umbler.net" local="133014319981744961" remote="133013517000000000" Dst="0" />
+<file name="CustomArg.php" server="testeemail-com-br.umbler.net" local="133014319981901201" remote="133013517000000000" Dst="0" />
+<file name="EmailAddress.php" server="testeemail-com-br.umbler.net" local="133014319982122524" remote="133013517000000000" Dst="0" />
+<file name="Footer.php" server="testeemail-com-br.umbler.net" local="133014319982278817" remote="133013517000000000" Dst="0" />
+<file name="From.php" server="testeemail-com-br.umbler.net" local="133014319982591313" remote="133013517000000000" Dst="0" />
+<file name="Ganalytics.php" server="testeemail-com-br.umbler.net" local="133014319982747552" remote="133013517000000000" Dst="0" />
+<file name="GroupId.php" server="testeemail-com-br.umbler.net" local="133014319982903795" remote="133013517000000000" Dst="0" />
+<file name="GroupsToDisplay.php" server="testeemail-com-br.umbler.net" local="133014319983125111" remote="133013517000000000" Dst="0" />
+<file name="Header.php" server="testeemail-com-br.umbler.net" local="133014319983281403" remote="133013517000000000" Dst="0" />
+<file name="HtmlContent.php" server="testeemail-com-br.umbler.net" local="133014319983437661" remote="133013517000000000" Dst="0" />
+<file name="IpPoolName.php" server="testeemail-com-br.umbler.net" local="133014319983593900" remote="133013517000000000" Dst="0" />
+<file name="BypassSpamManagement.php" server="testeemail-com-br.umbler.net" local="133014319991008859" remote="133013517000000000" Dst="0" />
+<file name="MimeType.php" server="testeemail-com-br.umbler.net" local="133014319991295235" remote="133013517000000000" Dst="0" />
+<file name="MailSettings.php" server="testeemail-com-br.umbler.net" local="133014319991295235" remote="133013517000000000" Dst="0" />
+<file name="Mail.php" server="testeemail-com-br.umbler.net" local="133014319991451488" remote="133013517000000000" Dst="0" />
+<file name="OpenTracking.php" server="testeemail-com-br.umbler.net" local="133014319991607744" remote="133013517000000000" Dst="0" />
+<file name="Personalization.php" server="testeemail-com-br.umbler.net" local="133014319991763975" remote="133013517000000000" Dst="0" />
+<file name="PlainTextContent.php" server="testeemail-com-br.umbler.net" local="133014319991763975" remote="133013517000000000" Dst="0" />
+<file name="ReplyTo.php" server="testeemail-com-br.umbler.net" local="133014319991920224" remote="133013517000000000" Dst="0" />
+<file name="SandBoxMode.php" server="testeemail-com-br.umbler.net" local="133014319992076479" remote="133013517000000000" Dst="0" />
+<file name="Section.php" server="testeemail-com-br.umbler.net" local="133014319992141535" remote="133013517000000000" Dst="0" />
+<file name="SendAt.php" server="testeemail-com-br.umbler.net" local="133014319992297838" remote="133013517000000000" Dst="0" />
+<file name="SpamCheck.php" server="testeemail-com-br.umbler.net" local="133014319992443944" remote="133013517000000000" Dst="0" />
+<file name="Subject.php" server="testeemail-com-br.umbler.net" local="133014319992634460" remote="133013517000000000" Dst="0" />
+<file name="SubscriptionTracking.php" server="testeemail-com-br.umbler.net" local="133014319992790716" remote="133013517000000000" Dst="0" />
+<file name="Substitution.php" server="testeemail-com-br.umbler.net" local="133014319992946983" remote="133013517000000000" Dst="0" />
+<file name="TemplateId.php" server="testeemail-com-br.umbler.net" local="133014319993143261" remote="133013517000000000" Dst="0" />
+<file name="To.php" server="testeemail-com-br.umbler.net" local="133014319993299550" remote="133013517000000000" Dst="0" />
+<file name="TrackingSettings.php" server="testeemail-com-br.umbler.net" local="133014319993455819" remote="133013517000000000" Dst="0" />
+<file name="TypeException.php" server="testeemail-com-br.umbler.net" local="133014319993612079" remote="133013517000000000" Dst="0" />
+</dwsync>

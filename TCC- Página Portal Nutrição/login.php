@@ -22,7 +22,7 @@
         <small>Senha:</small>
         <input type="password" name="senha" required>
         <a href="index.html"><button id="entrar" type="submit">ENTRAR</button></a>
-        <a href="#"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
+        <a href="recuperar-senha.php"><h3 id="recuperar-senha">Esqueceu a senha?</h3></a>
         </div>
         <div class="criarConta">
             <h3>É novo por aqui?</h3>
