@@ -5,6 +5,28 @@
     datetime("d/m/Y", stretotime($dado["dataNasc"]))
 */
 ?>
+<<<<<<< HEAD
+<title>Meu perfil -Nutriação</title>
+
+<?php
+  //HEADER
+  include 'includes/header.php';
+  //NAV-BAR
+  include 'includes/nav-bar.php';
+?>
+<body>
+    <!-- início do preloader -->
+    <div id="preloader">
+      <div class="inner">
+         <div class="bolas">
+            <div></div>
+            <div></div>
+            <div></div>                    
+         </div>
+      </div>
+  </div>
+  <!-- fim do preloader --> 
+=======
 <!DOCTYPE html>
 <html lang="pt-br"> 
 <head>
@@ -82,6 +104,7 @@
       </form>
     </div>
   </nav>
+>>>>>>> b2d9855cbff23e360ab687fb5ca802e45000c81b
   <hr>
 <main class="container-perfil">
     <div class="card-opcoes">
@@ -115,7 +138,11 @@
                   $dataNascimento = $_SESSION['dataNasc'];
                   $data = new DateTime($dataNascimento);
                   $resultado = $data->diff(new DateTime( date('Y-m-d')));
+<<<<<<< HEAD
+                ?>  
+=======
                 ?>
+>>>>>>> b2d9855cbff23e360ab687fb5ca802e45000c81b
                 <strong><h5>Idade:</strong> <small><?php echo $resultado->format( '%Y anos' );?></small></h5>
                 <hr>
                 <strong><h5>Peso inicial:</strong> <small><?php echo($_SESSION['pesoInicial']);?></small></h5>
@@ -139,11 +166,5 @@
           </div>
 
 </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="script/js.js" defer></script>
-<script src="preloader.js"></script>
 </body>
 </html>

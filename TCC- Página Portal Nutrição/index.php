@@ -2,6 +2,29 @@
   include('protect.php');
 ?>
 
+<<<<<<< HEAD
+<?php
+  //HEADER
+  include 'includes/header.php';
+  //NAV-BAR
+  include 'includes/nav-bar.php';
+?>
+<title>NutriAção -Início</title>
+<body>
+    <!-- início do preloader -->
+    <div id="preloader">
+      <div class="inner">
+         <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+         <img src="img\gifs\1474.gif" alt="" width="90px">
+         <div class="bolas">
+            <div></div>
+            <div></div>
+            <div></div>                    
+         </div>
+      </div>
+  </div>
+  <!-- fim do preloader --> 
+=======
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -84,6 +107,7 @@
       </form>
     </div>
   </nav>
+>>>>>>> b2d9855cbff23e360ab687fb5ca802e45000c81b
 <main>
   <div class="conteudo">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -146,7 +170,7 @@
             </div></a>  
         </div>
         <div class="cards-up">
-            <a href="exercicios.html"><div class="container-cards">
+            <a href="exercicios.php"><div class="container-cards">
                 <img src="img/cards/imagem2-alongamento.jpg" alt="" width="800vh" style="max-height:270px">
                 <p id="title-cards">PROGRAMA DE<strong> EXERCÍCIOS</strong></p>
                 <p id="text-cards">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ad pariatur enim omnis consectetur, repellendus laudantium dolor dicta perferendis, illo unde quo, officiis nesciunt aperiam placeat cum quae. Unde, exercitationem!</p>
@@ -183,6 +207,12 @@
     </div>
     </div>
 </section>
+<<<<<<< HEAD
+<?php
+  //FOOTER
+  include 'includes/footer.php';
+?> 
+=======
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
   <!-- Section: Links  -->
@@ -280,5 +310,6 @@
 <script src="script/js.js"></script>
 <script src="preloader.js"></script>
  
+>>>>>>> b2d9855cbff23e360ab687fb5ca802e45000c81b
 </body>
 </html>

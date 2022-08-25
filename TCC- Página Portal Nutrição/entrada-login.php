@@ -22,9 +22,12 @@
             if(!isset($_SESSION)){
                 session_start();
             }
+<<<<<<< HEAD
+=======
           
 
 
+>>>>>>> b2d9855cbff23e360ab687fb5ca802e45000c81b
             $_SESSION['id'] = $user['idUser'];
             $_SESSION['nome'] = $user['nome'];
             $_SESSION['email'] = $user['email'];
