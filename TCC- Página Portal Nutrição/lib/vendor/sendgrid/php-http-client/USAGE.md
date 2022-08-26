@@ -1,126 +1,19 @@
-# Usage
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2017 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
 
-Usage examples for SendGrid php-http-client
-
-## Initialization
-
-```
-// If running this outside of this context, use the following include and
-// comment out the two includes below
-// require __DIR__ . '/vendor/autoload.php';
-include(dirname(__DIR__) . '/lib/Client.php');
-// This gets the parent directory, for your current directory use getcwd()
-$path_to_config = dirname(__DIR__);
-$apiKey = getenv('SENDGRID_API_KEY');
-$headers = ['Authorization: Bearer ' . $apiKey];
-$client = new SendGrid\Client('https://api.sendgrid.com', $headers, '/v3');
-```
-
-## Table of Contents
-
-- [GET](#get)
-- [DELETE](#delete)
-- [POST](#post)
-- [PUT](#put)
-- [PATCH](#patch)
-
-<a name="get"></a>
-## GET
-
-#### GET Collection
-
-```
-$query_params = ['limit' => 100, 'offset' => 0];
-$request_headers = ['X-Mock: 200'];
-$response = $client->api_keys()->get(null, $query_params, $request_headers);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-```
-
-#### GET with auto retry on rate limit
-
-```
-$query_params = ['limit' => 100, 'offset' => 0];
-$request_headers = ['X-Mock: 200'];
-$retryOnLimit = true;
-$response = $client->api_keys()->get(null, $query_params, $request_headers, $retryOnLimit);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-```
-
-#### GET with array of values
-
-```
-$query_params = [
-    'aggregated_by' => 'month',
-    'subusers' => ['one', 'two', 'three'],
-    'start_date' => '2019-01-01',
-    'end_date' => '2019-01-31',
-];
-$request_headers = ['X-Mock: 200'];
-$retryOnLimit = true;
-$response = $client->subusers()->stats()->get(null, $query_params, $request_headers, $retryOnLimit);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-```
-
-<a name="delete"></a>
-## DELETE
-
-```
-$response = $client->api_keys()->_($api_key_id)->delete();
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-```
-
-<a name="post"></a>
-## POST
-
-```
-$request_body = [
-    'name' => 'My PHP API Key',
-    'scopes' => [
-        'mail.send',
-        'alerts.create',
-        'alerts.read'
-    ]
-];
-$response = $client->api_keys()->post($request_body);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-$response_body = json_decode($response->body());
-$api_key_id = $response_body->api_key_id;
-```
-<a name="put"></a>
-## PUT
-
-```
-$request_body = [
-    'name' => 'A New Hope',
-    'scopes' => [
-        'user.profile.read',
-        'user.profile.update'
-    ]
-];
-$response = $client->api_keys()->_($api_key_id)->put($request_body);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-```
-<a name="patch"></a>
-## PATCH
-
-```
-$request_body = [
-    'name' => 'A New Hope'
-];
-$response = $client->api_keys()->_($api_key_id)->patch($request_body);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-```
+define({SELECTOR_LABEL:"app_center",APP_CENTER:"App Center",app_center_TITLE:"Do more with Adobe Document Cloud",app_center_CONTENT:"Work where you want - desktop, online, or mobile.",app_center_DESKTOP_APPS:"Desktop apps",app_center_ACROBAT_PRO_DC_HEADER:"Acrobat Pro DC",app_center_ACROBAT_PRO_DC_CONTENT:"Start a free trial of Acrobat Pro DC that includes tools to create, export, and edit PDFs.",app_center_WEB_APPS:"Web apps & services",app_center_DOCUMENT_CLOUD_HEADER:"Document Cloud",app_center_DOCUMENT_CLOUD_CONTENT_READER:"Use your favorite Acrobat Reader tools in any browser.",app_center_DOCUMENT_CLOUD_CONTENT_ACROBAT:"Use your favorite Acrobat tools in any browser.",app_center_MOBILE_APPS:"Mobile apps",app_center_ACROBAT_READER_HEADER:"Acrobat Reader",app_center_ACROBAT_READER_CONTENT_READER:"Comment on, sign, and share files right on your phone or tablet.",app_center_ACROBAT_READER_CONTENT_ACROBAT:"Create, export, fill, sign, and share files right on your phone or tablet.",app_center_ADOBE_SCAN_HEADER:"Adobe Scan",app_center_ADOBE_SCAN_CONTENT:"Scan anything - receipts, notes, documents, and more - to PDF.",app_center_FILL_SIGN_HEADER:"Fill & Sign",app_center_FILL_SIGN_CONTENT:"Easily fill in forms and sign them on the go.",app_center_TRY:"Try",app_center_LAUNCH:"Launch",app_center_DOWNLOAD:"Download",app_center_GET_APP:"Get App",app_center_card_ADOBE_SCAN:"Adobe Scan",app_center_card_ADOBE_SCAN_TITLE:"Get the free Adobe Scan app",app_center_card_ADOBE_SCAN_DESCRIPTION:"Turn your phone or tablet into a portable scanner to scan anything to PDF. Download now.",app_center_card_ADOBE_ACROBAT_READER:"Adobe Acrobat Reader",app_center_card_ADOBE_ACROBAT_READER_TITLE:"Get the free Adobe Acrobat Reader app",app_center_card_ADOBE_ACROBAT_READER_DESCRIPTION:"Use your favorite PDF and signing tools on your phone or tablet. Download now.",app_center_card_ADOBE_FILL_SIGN:"Adobe Fill & Sign",app_center_card_ADOBE_FILL_SIGN_TITLE:"Get the free Adobe Fill & Sign app",app_center_card_ADOBE_FILL_SIGN_DESCRIPTION:"Fill, sign, and send any form fast on your phone or tablet. Download now.",app_center_qr_code_card_ADOBE_SCAN:"Adobe Scan",app_center_qr_code_card_ADOBE_SCAN_

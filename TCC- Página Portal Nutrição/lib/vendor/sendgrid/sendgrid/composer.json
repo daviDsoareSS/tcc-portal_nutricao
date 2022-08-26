@@ -1,56 +1,19 @@
-{
-  "name": "sendgrid/sendgrid",
-  "description": "This library allows you to quickly and easily send emails through Twilio SendGrid using PHP.",
-  "homepage": "http://github.com/sendgrid/sendgrid-php",
-  "license": "MIT",
-  "keywords": [
-    "SendGrid",
-    "sendgrid",
-    "Twilio SendGrid",
-    "twilio sendgrid",
-    "email",
-    "send",
-    "grid"
-  ],
-  "require": {
-    "php": ">=5.6",
-    "sendgrid/php-http-client": "~3.10",
-    "starkbank/ecdsa": "0.*",
-    "ext-curl": "*",
-    "ext-json": "*",
-    "ext-mbstring": "*",
-    "ext-openssl": "*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^5.7.9 || ^6.4.3",
-    "squizlabs/php_codesniffer": "3.*",
-    "swaggest/json-diff": "^3.4"
-  },
-  "replace": {
-    "sendgrid/sendgrid-php": "*"
-  },
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "SendGrid\\Contacts\\": "lib/contacts/",
-      "SendGrid\\EventWebhook\\": "lib/eventwebhook/",
-      "SendGrid\\Helper\\": "lib/helper/",
-      "SendGrid\\Mail\\": "lib/mail/",
-      "SendGrid\\Stats\\": "lib/stats/"
-    },
-    "classmap": [
-      "lib/BaseSendGridClientInterface.php",
-      "lib/SendGrid.php",
-      "lib/TwilioEmail.php"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "SendGrid\\Tests\\Integration\\": "test/integration",
-      "SendGrid\\Tests\\Unit\\": "test/unit"
-    },
-    "classmap": [
-      "test/BaseTestClass.php"
-    ]
-  }
-}
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2017 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+define({SELECTOR_LABEL:"app_center",APP_CENTER:"앱 센터",app_center_TITLE:"Adobe Document Cloud로 더 많은 작업을 하십시오.",app_center_CONTENT:"원하는 곳에서 작업할 수 있습니다(데스크톱, 온라인 또는 모바일).",app_center_DESKTOP_APPS:"데스크톱 앱",app_center_ACROBAT_PRO_DC_HEADER:"Acrobat Pro DC",app_center_ACROBAT_PRO_DC_CONTENT:"PDF를 작성, 내보내기 및 편집하는 도구가 포함된 Acrobat Pro DC의 무료 평가판을 시작합니다.",app_center_WEB_APPS:"웹 앱 및 서비스",app_center_DOCUMENT_CLOUD_HEADER:"Document Cloud",app_center_DOCUMENT_CLO

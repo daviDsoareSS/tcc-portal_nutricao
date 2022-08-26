@@ -26,32 +26,16 @@
   </div>
   <!-- fim do preloader --> 
   <hr>
-<main class="container-perfil">
-    <div class="card-opcoes">
-        <div class="card-topo">
-          Perfil
-        </div>
-        <ul class="opcoes" id="opcoes-card">
-          <a href="perfil.php"><li class="" value="1">Informações pessoais</li></a>
-       
-          <a href="perfil-meu-plano.html"><li class="" value="2">Meu plano</li></a>
-      
-          <li class="" value="3">Exercícios</li>
-          
-          <li class="">Alimentação</li>
-          
-          <li class="">Consultas</li>
-        </ul>
-      </div>
+  <form action="update.php">
       <div class="container-perfil-informacoes">
           <div class="grid-perfil">
             <h2>Dados do usuário</h2>
             <span id="linha-title"></span>
               <div class="dados-usuario">
       
-                <strong><h5>Email:</strong> <small><?php echo($_SESSION['email']);?></small></h5>
+                <strong><h5>Email:</strong> <input placeholder="<?php echo($_SESSION['email']);?>"> <img src="img/icons/pencil.png" alt="" width="25px"></input></h5>
                 <hr>
-                <strong><h5>Nome:</strong> <small><?php echo($_SESSION['nome']);?></small></h5>
+                <strong><h5>Nome:</strong> <input placeholder="<?php echo($_SESSION['nome']);?>"><img src="img/icons/pencil.png" alt="" width="25px"></input></h5>
                 <hr>
                 <?php
                  //FUNÇÃO CALCULAR IDADE DO USUARIO
@@ -63,14 +47,14 @@
                 <hr>
                 <strong><h5>Peso inicial:</strong> <small><?php echo($_SESSION['pesoInicial']);?></small></h5>
                 <hr>
-                <strong><h5>Altura:</strong> <small><?php echo($_SESSION['altura']);?></h5>
+                <strong><h5>Altura:</strong> <input placeholder="<?php echo($_SESSION['altura']);?>"></h5>
                 <hr>
                 <strong><h5>Plano selecionado:</strong> <small>Ganho de peso Intermediário</small></h5>
                 <hr>
-                <a href="editar.php"><button id="btn-editar">Editar</button></a>
-                <button id="btn-alterar-senha">Alterar senha</button>
+                <button id="btn-alterar-senha">Confirmar</button>
             </div>
           </div>
+          </form>
           <div class="grid-perfil ">
             <div class="card text-center card-alterar-foto" style="width: 18rem;">
               <div class="card-body "> 

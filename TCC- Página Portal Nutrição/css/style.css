@@ -739,6 +739,11 @@ footer{
     background: rgb(51,228,128);
     background: linear-gradient(0deg, rgba(51,228,128,1) 0%, rgba(94,153,119,1) 100%);
 }
+.dados-usuario input{
+    color: white;
+    border: none;
+    background: none;
+}
 .card-alterar-foto{
     margin-top: 3.7vw;
 }
