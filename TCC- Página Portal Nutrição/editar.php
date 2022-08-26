@@ -26,16 +26,16 @@
   </div>
   <!-- fim do preloader --> 
   <hr>
-  <form action="update.php">
+  <form action="update.php" method="post">
       <div class="container-perfil-informacoes">
           <div class="grid-perfil">
             <h2>Dados do usuário</h2>
             <span id="linha-title"></span>
               <div class="dados-usuario">
       
-                <strong><h5>Email:</strong> <input placeholder="<?php echo($_SESSION['email']);?>"> <img src="img/icons/pencil.png" alt="" width="25px"></input></h5>
+                <strong><h5>Email:</strong> <input name="email" placeholder="<?php echo($_SESSION['email']);?>"> <img src="img/icons/pencil.png" alt="" width="25px"></input></h5>
                 <hr>
-                <strong><h5>Nome:</strong> <input placeholder="<?php echo($_SESSION['nome']);?>"><img src="img/icons/pencil.png" alt="" width="25px"></input></h5>
+                <strong><h5>Nome:</strong> <input name="nome" placeholder="<?php echo($_SESSION['nome']);?>"><img src="img/icons/pencil.png" alt="" width="25px"></input></h5>
                 <hr>
                 <?php
                  //FUNÇÃO CALCULAR IDADE DO USUARIO
@@ -47,7 +47,7 @@
                 <hr>
                 <strong><h5>Peso inicial:</strong> <small><?php echo($_SESSION['pesoInicial']);?></small></h5>
                 <hr>
-                <strong><h5>Altura:</strong> <input placeholder="<?php echo($_SESSION['altura']);?>"></h5>
+                <strong><h5>Altura:</strong> <input name="altura"  placeholder="<?php echo($_SESSION['altura']);?>"></h5>
                 <hr>
                 <strong><h5>Plano selecionado:</strong> <small>Ganho de peso Intermediário</small></h5>
                 <hr>
